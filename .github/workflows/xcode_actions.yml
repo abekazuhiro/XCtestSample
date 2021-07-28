@@ -14,3 +14,8 @@ jobs:
 
       - name: Show Xcode Version 
         run: xcodebuild -version 
+
+      - name: Build project 
+        run: |
+		    xcodebuild -project XCtestSample.xcodeproj -target XCtestSample -sdk iphonesimulator -configuration Debug build 
+
