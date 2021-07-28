@@ -1,0 +1,16 @@
+name: sample-xcode-actions
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Show Xcode Version 
+        run: xcodebuild -version 
